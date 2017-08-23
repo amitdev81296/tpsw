@@ -1,0 +1,24 @@
+{% extends 'tp/base.html' %}
+
+{% block signin %}
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    </ul>
+{% endblock %}
+{% block content %}
+<center><br><br><br><br><br><br><br>
+    <form action="{% url 'login' %}" method="POST">
+        <div class="container" style="height: 20%; width: 30%; box-shadow: 4px 4px 4px 4px #888888;">
+            <div class="form-container">
+                <br><h1>Login</h1><br><br>
+                <label>Email</label><br>
+                <input type="text" size="40" maxlength="100"><br><br><br>
+                <label>Password</label><br>
+                <input type="password" size="40" maxlength="100"><br><br><br>
+                <button type="submit" class="btn btn-primary">Login</button><br><br><br>
+            </div>
+        </div>
+    </form>
+    <br><br><br><h6>All Rights Reserved &#169; 2017</h6>
+</center>
+{% endblock %}

@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome to TP Cell</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'tp/material.css' %}">
-    <script src="{% static 'tp/material.js' %}"></script>
-</head>
-<body style="background-color: #091221;">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-            <span class="mdl-layout-title"><label style="font-family: sans-serif">Don Bosco Institute of Technology<br>Training and Placement Portal</label></span>
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation. We hide it in small screens. -->
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
+{% extends 'tp/base.html' %}
 
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Sidebar Menu</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">About Us</a>
-          <a class="mdl-navigation__link" href="">Official Site</a>
-          <a class="mdl-navigation__link" href="">Alumni</a>
-          <a class="mdl-navigation__link" href="">Contact Us</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-        <div class="page-content"><!-- Your content goes here --></div>
-      </main>
-    </div>
-</body>
-</html>
+{% block signin %}
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+{% endblock %}
