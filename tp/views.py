@@ -8,7 +8,5 @@ def index(request):
 
 
 def login(request):
-    if request.method == 'POST':
-        
     return render(request, 'tp/login.html')
 
