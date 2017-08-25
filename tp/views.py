@@ -9,22 +9,19 @@ def index(request):
 
 
 def login(request):
-    form = UserLoginForm
+    form = UserLoginForm()
     context = {'form': form}
     return render(request, 'tp/login.html', context)
 
 
 def dashboard(request):
-    form = UserLoginForm(request.POST)
-    if form.is_valid():
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password']
-        # returns User objects if credentials are correct
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                return render(request, 'tp/dashboard.html', {'user': user})
-
-
-
+    if request.method == 'POST':
+        empty_form = UserLoginForm()
+        un = request.POST['username']
+        pw = request.POST['password']
+        user = authenticate(username=un, password=pw)
+        if user:
+            return render(request, 'tp/dashboard.html', {'user': user})
+        else:
+            return render(request, 'tp/login.html', {'form': empty_form})
 
