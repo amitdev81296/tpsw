@@ -1,4 +1,6 @@
 {% extends 'tp/base.html' %}
-{% block content %}
-    <br><br><br><br><h1>Welcome, {{ user.username }}</h1>
+{% block signin %}
+    <ul class="nav navbar-nav navbar-right">
+        <li><h4 style="color: white;">Welcome, {{ user.first_name }}</h4></li>
+    </ul>
 {% endblock %}
