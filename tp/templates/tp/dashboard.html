@@ -4,3 +4,13 @@
         <li><h4 style="color: white;">Welcome, {{ user.first_name }}</h4></li>
     </ul>
 {% endblock %}
+{% block content %}<br><br><br>
+    {{ user_profile.student_id }}<br>
+    {{ user_profile.birth_date }}<br>
+    {{ user_profile.get_age }}<br>
+    {% if user_profile.allowed %}
+        <h1>Allowed For Placements</h1>
+    {% else %}
+        <h1>Debarred From Placements</h1>
+    {% endif %}
+{% endblock %}
