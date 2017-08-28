@@ -45,3 +45,10 @@ class UserProfile(models.Model):
         today = date.today()
         dob = self.birth_date
         return int(today.year) - int(dob.year)
+
+
+class Post(models.Model):
+    user = models.ForeignKey(User)
+    title = models.TextField(max_length=100)
+    body = models.TextField(max_length=1000)
+    created = models.DateTimeField(default=timezone.now)
