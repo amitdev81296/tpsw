@@ -19,11 +19,19 @@ class UserProfile(models.Model):
         ('Female', 'Female'),
         ('Others', 'Others'),
     )
+    BRANCH_CHOICES = (
+        ('IT', 'IT'),
+        ('MECH', 'MECH'),
+        ('COMPS', 'COMPS'),
+        ('ITI', 'ITI'),
+        ('HM', 'HM'),
+    )
     user = models.OneToOneField(User, unique=True)
     student_id = models.CharField(max_length=10)
     roll_no = models.IntegerField()
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     birth_date = models.DateField(default=timezone.now)
+    branch = models.CharField(max_length=10, choices=BRANCH_CHOICES)
     profile_photo = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/photos_folder', max_length=100)
     resume_pdf = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/resumes_folder', max_length=100)
     marksheet_pdf = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/marksheets_folder', max_length=100)
