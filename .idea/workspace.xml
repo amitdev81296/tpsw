@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="259fa69d-aa15-4e99-ae0e-2b6044f9a0c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    <list default="true" id="259fa69d-aa15-4e99-ae0e-2b6044f9a0c6" name="Default" comment="Added BRANCH_CHOICE Attribute to UserProfile">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/models.py" afterPath="$PROJECT_DIR$/tp/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/templates/tp/dashboard.html" afterPath="$PROJECT_DIR$/tp/templates/tp/dashboard.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/tp/templates/tp/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
               </folding>
@@ -309,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503730564685</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added BRANCH_CHOICE Attribute to UserProfile">
+      <created>1503936891351</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1503936891351</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,7 +353,8 @@
     <MESSAGE value="User Getting Access To Dashboard on Correct Login and Filtering Incorrect Logins" />
     <MESSAGE value="Dashboard Changed Little and UserProfile model Added" />
     <MESSAGE value="UserProfile Model Finalized and Displayed in Template" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserProfile Model Finalized and Displayed in Template" />
+    <MESSAGE value="Added BRANCH_CHOICE Attribute to UserProfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added BRANCH_CHOICE Attribute to UserProfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -797,7 +803,7 @@
     <entry file="file://$PROJECT_DIR$/tp/templates/tp/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
           </folding>
