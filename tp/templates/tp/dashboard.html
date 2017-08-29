@@ -8,10 +8,17 @@
     {{ user_profile.student_id }}<br>
     {{ user_profile.birth_date }}<br>
     {{ user_profile.get_age }}<br>
-    {{ user_profile.get_age }}
     {% if user_profile.allowed %}
         <h1>Allowed For Placements</h1>
     {% else %}
         <h1>Debarred From Placements</h1>
     {% endif %}
+
+    <br><br>
+    {% for post in posts %}
+        {{ post.user }}<br>
+        {{ post.title }}<br>
+        {{ post.body }}<br>
+        {{ post.created }}<br>
+    {% endfor %}
 {% endblock %}
