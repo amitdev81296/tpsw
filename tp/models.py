@@ -46,9 +46,15 @@ class UserProfile(models.Model):
         dob = self.birth_date
         return int(today.year) - int(dob.year)
 
+    def __str__(self):
+        return self.user.first_name + " " + self.user.last_name
+
 
 class Post(models.Model):
     user = models.ForeignKey(User)
     title = models.TextField(max_length=100)
     body = models.TextField(max_length=1000)
     created = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title

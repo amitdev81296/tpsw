@@ -1,24 +1,58 @@
 {% extends 'tp/base.html' %}
+{% block inlinecss %}
+    <style>
+        .profile-container {
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            top: 51.7px;
+            left: 0;
+            background-color: #0f0c1c;
+        }
+        .post-container {
+            width: 100%;
+            height: 100%;
+            padding-top: 51.7px;
+            padding-left: 20%;
+            padding-right: 20%;
+            background-color: #000000;
+        }
+        .profile-container, post-container {
+            display: inline;
+        }
+        .container {
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10%;
+            color: white;
+            text-align: justify;
+        }
+    </style>
+{% endblock %}
 {% block signin %}
     <ul class="nav navbar-nav navbar-right">
         <li><h4 style="color: white;">Welcome, {{ user.first_name }}</h4></li>
     </ul>
 {% endblock %}
-{% block content %}<br><br><br>
-    {{ user_profile.student_id }}<br>
-    {{ user_profile.birth_date }}<br>
-    {{ user_profile.get_age }}<br>
-    {% if user_profile.allowed %}
-        <h1>Allowed For Placements</h1>
-    {% else %}
-        <h1>Debarred From Placements</h1>
-    {% endif %}
-
-    <br><br>
-    {% for post in posts %}
-        {{ post.user }}<br>
-        {{ post.title }}<br>
-        {{ post.body }}<br>
-        {{ post.created }}<br>
+{% block content %}
+    <div class="profile-container">
+        <div class="container">
+            {{ user.first_name }}&nbsp;{{ user.last_name }}
+        </div>
+    </div>
+    {%for post in posts%}
+    <div class="post-container">
+        <div class="container">
+            {{ post.user.first_name }}&nbsp;{{ post.user.last_name }}
+            <br><br>
+            {{ post.title }}
+            <br><br>
+            {{ post.body }}
+            <br><br>
+            {{ post.created }}
+        </div>
+    </div>
+    <br>
     {% endfor %}
 {% endblock %}
