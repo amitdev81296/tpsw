@@ -44,13 +44,13 @@
     {%for post in posts%}
     <div class="post-container">
         <div class="container">
-            {{ post.user.first_name }}&nbsp;{{ post.user.last_name }}
+
             <br><br>
             {{ post.title }}
             <br><br>
             {{ post.body }}
             <br><br>
-            {{ post.created }}
+            <p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p>
         </div>
     </div>
     <br>
