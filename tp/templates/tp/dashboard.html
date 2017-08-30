@@ -1,12 +1,15 @@
 {% extends 'tp/base.html' %}
 {% block inlinecss %}
     <style>
+        hr {
+            border: 1px solid #272828;
+        }
         .profile-container {
             width: 20%;
             height: 100%;
             position: fixed;
             top: 51.7px;
-            left: 0;
+            left: 2;
             background-color: #0f0c1c;
         }
         .post-container {
@@ -16,16 +19,17 @@
             padding-left: 20%;
             padding-right: 20%;
             background-color: #000000;
+            overflow-x: hidden;
         }
         .profile-container, post-container {
             display: inline;
         }
         .container {
             padding-top: 10px;
-            padding-left: 10px;
+            padding-left: 20px;
             padding-bottom: 10px;
-            padding-right: 10%;
-            color: white;
+            padding-right: 12%;
+            color: grey;
             text-align: justify;
         }
     </style>
@@ -38,21 +42,24 @@
 {% block content %}
     <div class="profile-container">
         <div class="container">
-            {{ user.first_name }}&nbsp;{{ user.last_name }}
+            <h3 style="color: white">{{ user.first_name }}&nbsp;{{ user.last_name }}</h3>
+            <h5>Student ID : {{ user_profile.student_id }}</h5>
+            <h5>Branch : {{ user_profile.branch }}</h5>
+            <h5>Birth Date : {{ user_profile.birth_date }}</h5>
+            <h5>Allowed For Placements : {% if user_profile.allowed %}<span class="glyphicon glyphicon-ok"></span>{% else %}<span class="glyphicon glyphicon-remove"></span>{% endif %}</h5>
+            <br><button type="button" class="btn btn-success">Logout</button>
         </div>
     </div>
-    {%for post in posts%}
     <div class="post-container">
+    {% for post in posts %}
         <div class="container">
+            <hr>
+            <h2 style="color: white">{{ post.title }}</h2>
 
-            <br><br>
-            {{ post.title }}
-            <br><br>
-            {{ post.body }}
-            <br><br>
-            <p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p>
+            <strong><p>{{ post.body }}</p></strong>
+            <small><p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p></small>
+            <hr>
         </div>
-    </div>
-    <br>
     {% endfor %}
+    </div>
 {% endblock %}
