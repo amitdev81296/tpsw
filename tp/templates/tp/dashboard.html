@@ -18,7 +18,6 @@
             padding-top: 51.7px;
             padding-left: 20%;
             padding-right: 20%;
-            background-color: #000000;
             overflow-x: hidden;
         }
         .profile-container, post-container {
@@ -52,13 +51,10 @@
     </div>
     <div class="post-container">
     {% for post in posts %}
-        <div class="container">
-            <hr>
-            <h2 style="color: white">{{ post.title }}</h2>
-
-            <strong><p>{{ post.body }}</p></strong>
-            <small><p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p></small>
-            <hr>
+        <div class="panel panel-default" style="width: 135%">
+            <div class="panel-heading"><h2>{{ post.title }}</h2></div>
+            <div class="panel-body"><strong><p>{{ post.body }}</p></strong></div>
+            <div class="panel-footer"><small><p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p></small></div>
         </div>
     {% endfor %}
     </div>

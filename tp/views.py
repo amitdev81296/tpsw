@@ -21,7 +21,7 @@ def dashboard(request):
         pw = request.POST['password']
         user = authenticate(username=un, password=pw)
         user_profile = UserProfile.objects.get(user = user)
-        post = Post.objects.all()
+        post = Post.objects.order_by('-created')
         if user:
             return render(request, 'tp/dashboard.html', {'user': user, 'user_profile': user_profile, 'posts': post})
         else:
