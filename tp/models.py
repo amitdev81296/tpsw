@@ -4,12 +4,15 @@ from django.contrib.auth.models import User
 from django import forms
 from django.utils import timezone
 from datetime import date
+from django.core.validators import MinValueValidator
+
 
 class UserSignupForm(ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'email' ,'password']
+        fields = ['first_name', 'last_name', 'username', 'email', 'password']
         widgets = {'password': forms.PasswordInput}
+
 
 class UserLoginForm(ModelForm):
     class Meta:
@@ -37,6 +40,7 @@ class UserProfile(models.Model):
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     birth_date = models.DateField(default=timezone.now)
     branch = models.CharField(max_length=10, choices=BRANCH_CHOICES)
+    cgpa = models.DecimalField(decimal_places=2, max_digits=10, validators=[MinValueValidator(0.01)])
     profile_photo = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/photos_folder', max_length=100)
     resume_pdf = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/resumes_folder', max_length=100)
     marksheet_pdf = models.FileField(upload_to='C:/Users/nijsu/PycharmProjects/tpsw/tp/marksheets_folder', max_length=100)

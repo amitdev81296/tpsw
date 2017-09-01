@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import UserSignupForm, UserLoginForm, UserProfile, Post
 from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -27,10 +28,6 @@ def dashboard(request):
         else:
             return render(request, 'tp/login.html', {'form': empty_form})
 
-
-def signup_form_display(request):
-    signup_form = UserSignupForm()
-    return render(request, 'tp/signup.html', {'form': signup_form})
 
 
 
