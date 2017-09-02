@@ -47,15 +47,56 @@
             <h5>Birth Date : {{ user_profile.birth_date }}</h5>
             <h5>CGPA : {{ user_profile.cgpa }}</h5>
             <h5>Allowed For Placements : {% if user_profile.allowed %}<span class="glyphicon glyphicon-ok"></span>{% else %}<span class="glyphicon glyphicon-remove"></span>{% endif %}</h5>
-            <br><button type="button" class="btn btn-success">Logout</button>
+            <br>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">View Profile</button>
+            <button type="button" class="btn btn-success">Logout</button>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Your Profile</h4>
+                </div>
+                <div class="modal-body">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td><h5>Name</h5></td>
+                            <td><h5>{{ user.first_name }}&nbsp;{{ user.last_name }}</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Your ID</h5></td>
+                            <td><h5>{{ user_profile.student_id }}</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Branch</h5></td>
+                            <td><h5>{{ user_profile.branch }}</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Birth Date</h5></td>
+                            <td><h5>{{ user_profile.birth_date }}</h5></td>
+                        </tr>
+                        <tr>
+                            <td><h5>Your CGPA</h5></td>
+                            <td><h5>{{ user_profile.cgpa }}</h5></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default">Edit Your Profile</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="post-container">
     {% for post in posts %}
         <div class="panel panel-default" style="width: 135%">
             <div class="panel-heading"><h2>{{ post.title }}</h2></div>
-            <div class="panel-body"><strong><p>{{ post.body }}</p></strong></div>
-            <div class="panel-footer"><small><p>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</p></small></div>
+            <div class="panel-body"><strong>{{ post.body }}</strong></div>
+            <div class="panel-footer"><small>Posted by {{ post.user.first_name }}&nbsp;{{ post.user.last_name }} on {{ post.created }}</small></div>
         </div>
     {% endfor %}
     </div>

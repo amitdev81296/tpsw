@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="259fa69d-aa15-4e99-ae0e-2b6044f9a0c6" name="Default" comment="Sign Up Page Added (Accidently Not Added In Previous Commit )">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tp/templates/tp/signup.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    <list default="true" id="259fa69d-aa15-4e99-ae0e-2b6044f9a0c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/models.py" afterPath="$PROJECT_DIR$/tp/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/templates/tp/dashboard.html" afterPath="$PROJECT_DIR$/tp/templates/tp/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/templates/tp/index.html" afterPath="$PROJECT_DIR$/tp/templates/tp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/templates/tp/login.html" afterPath="$PROJECT_DIR$/tp/templates/tp/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/urls.py" afterPath="$PROJECT_DIR$/tp/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tp/views.py" afterPath="$PROJECT_DIR$/tp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +17,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="119">
               <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -48,14 +41,16 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tp/templates/tp/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="605">
+              <caret line="84" column="28" lean-forward="false" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#1187#1193#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="e#2108#2114#0" expanded="true" />
+                <element signature="e#2166#2173#1" expanded="true" />
+                <element signature="e#2498#2504#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#4023#4029#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -412,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504276384551</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Sign Up Functionality Removed Due to Problems and CGPA Field added to Models">
+      <created>1504285733538</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1504285733538</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -483,7 +485,8 @@
     <MESSAGE value="Ordered Posts According To Time Added on Dashboard" />
     <MESSAGE value="Sign Up Page Added" />
     <MESSAGE value="Sign Up Page Added (Accidently Not Added In Previous Commit )" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Page Added (Accidently Not Added In Previous Commit )" />
+    <MESSAGE value="Sign Up Functionality Removed Due to Problems and CGPA Field added to Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign Up Functionality Removed Due to Problems and CGPA Field added to Models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -506,8 +509,10 @@
             <element signature="n#style#0;n#h4#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#1187#1193#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#2108#2114#0" expanded="true" />
+            <element signature="e#2166#2173#1" expanded="true" />
+            <element signature="e#2498#2504#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#4023#4029#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -812,39 +817,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="533" column="16" lean-forward="false" selection-start-line="533" selection-start-column="16" selection-end-line="533" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,6 +854,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="467" column="22" lean-forward="false" selection-start-line="467" selection-start-column="22" selection-end-line="467" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tp/templates/tp/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -889,14 +894,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tp/templates/tp/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="605">
+          <caret line="84" column="28" lean-forward="false" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#li#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#1187#1193#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="e#2108#2114#0" expanded="true" />
+            <element signature="e#2166#2173#1" expanded="true" />
+            <element signature="e#2498#2504#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#4023#4029#0" expanded="true" />
           </folding>
         </state>
       </provider>
